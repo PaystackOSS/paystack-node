@@ -1,0 +1,32 @@
+{
+  "name": "paystack",
+  "version": "0.5.1",
+  "description": "Paystack API wrapper for Node",
+  "author": "Paystack <integrations@paystack.com> (https://paystack.com/docs)",
+  "keywords": [
+    "paystack",
+    "payment",
+    "cards",
+    "charge", 
+    "recurring payment",
+    "subscriptions",
+    "transfers",
+    "single transfers",
+    "bulk transfers", 
+    "send money", 
+    "multi splits"
+  ],
+  "homepage": "https://github.com/owner/project",
+  "bugs": "https://github.com/owner/project/issues",
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^15.0.3",
+    "typescript": "^3.6"
+  }
+}
