@@ -1,25 +1,23 @@
 {
-  "name": "paystack",
-  "version": "1.0.0-beta.1",
+  "name": "@paystack/node",
+  "version": "1.0.0-beta.2",
   "description": "Paystack API wrapper for Node",
   "author": "Paystack <integrations@paystack.com> (https://paystack.com/docs)",
   "keywords": [
     "paystack",
     "payment",
     "cards",
-    "charge",
+    "charge", 
     "recurring payment",
     "subscriptions",
     "transfers",
     "single transfers",
-    "bulk transfers",
-    "send money",
+    "bulk transfers", 
+    "send money", 
     "multi splits"
   ],
-  "homepage": "https://github.com/PaystackOSS/paystack-node",
-  "bugs": {
-    "url": "https://github.com/PaystackOSS/paystack-node/issues"
-  },
+  "homepage": "https://github.com/owner/project",
+  "bugs": "https://github.com/owner/project/issues",
   "license": "MIT",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
@@ -30,12 +28,5 @@
   "devDependencies": {
     "@types/node": "^15.0.3",
     "typescript": "^3.6"
-  },
-  "directories": {
-    "lib": "lib"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PaystackOSS/paystack-node.git"
   }
 }
