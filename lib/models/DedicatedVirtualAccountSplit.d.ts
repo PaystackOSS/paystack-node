@@ -12,28 +12,28 @@
 /**
  *
  * @export
- * @interface DedicatedNubanSplit
+ * @interface DedicatedVirtualAccountSplit
  */
-export interface DedicatedNubanSplit {
+export interface DedicatedVirtualAccountSplit {
     /**
      * Valid Dedicated virtual account
      * @type {string}
-     * @memberof DedicatedNubanSplit
+     * @memberof DedicatedVirtualAccountSplit
      */
     accountNumber: string;
     /**
      * Subaccount code of the account you want to split the transaction with
      * @type {string}
-     * @memberof DedicatedNubanSplit
+     * @memberof DedicatedVirtualAccountSplit
      */
     subaccount?: string;
     /**
      * Split code consisting of the lists of accounts you want to split the transaction with
      * @type {string}
-     * @memberof DedicatedNubanSplit
+     * @memberof DedicatedVirtualAccountSplit
      */
     splitCode?: string;
 }
-export declare function DedicatedNubanSplitFromJSON(json: any): DedicatedNubanSplit;
-export declare function DedicatedNubanSplitFromJSONTyped(json: any, ignoreDiscriminator: boolean): DedicatedNubanSplit;
-export declare function DedicatedNubanSplitToJSON(value?: DedicatedNubanSplit | null): any;
+export declare function DedicatedVirtualAccountSplitFromJSON(json: any): DedicatedVirtualAccountSplit;
+export declare function DedicatedVirtualAccountSplitFromJSONTyped(json: any, ignoreDiscriminator: boolean): DedicatedVirtualAccountSplit;
+export declare function DedicatedVirtualAccountSplitToJSON(value?: DedicatedVirtualAccountSplit | null): any;

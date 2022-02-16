@@ -46,7 +46,7 @@ export interface RemoveSplitRequest {
 /**
  *
  */
-export declare class DedicatedNUBAN extends BaseAPI {
+export declare class DedicatedVirtualAccount extends BaseAPI {
     /**
      * Split Dedicated Account Transaction
      */

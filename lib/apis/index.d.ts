@@ -2,7 +2,7 @@ export * as Balance from './Balance';
 export * as BulkCharge from './BulkCharge';
 export * as Charge from './Charge';
 export * as Customer from './Customer';
-export * as DedicatedNUBAN from './DedicatedNUBAN';
+export * as DedicatedVirtualAccount from './DedicatedVirtualAccount';
 export * as Dispute from './Dispute';
 export * as Integration from './Integration';
 export * as Page from './Page';
