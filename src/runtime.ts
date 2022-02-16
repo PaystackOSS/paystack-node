@@ -55,7 +55,7 @@ export class BaseAPI {
             path: tempPath,
             headers: {
                 "authorization": `Bearer ${this.apiKey}`,
-                "paystack-version": `paystack - 0.5.1`
+                "paystack-version": `@paystack/node - 1.0.0-beta.3`
             }
         }
 

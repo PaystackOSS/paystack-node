@@ -6,7 +6,7 @@ src/apis/Balance.ts
 src/apis/BulkCharge.ts
 src/apis/Charge.ts
 src/apis/Customer.ts
-src/apis/DedicatedNUBAN.ts
+src/apis/DedicatedVirtualAccount.ts
 src/apis/Dispute.ts
 src/apis/Integration.ts
 src/apis/Page.ts
@@ -38,8 +38,8 @@ src/models/CustomerRiskAction.ts
 src/models/CustomerUpdate.ts
 src/models/CustomerValidate.ts
 src/models/CustomerValidation.ts
-src/models/DedicatedNubanCreate.ts
-src/models/DedicatedNubanSplit.ts
+src/models/DedicatedVirtualAccountCreate.ts
+src/models/DedicatedVirtualAccountSplit.ts
 src/models/DisputeEvidence.ts
 src/models/DisputeResolve.ts
 src/models/DisputeUpdate.ts

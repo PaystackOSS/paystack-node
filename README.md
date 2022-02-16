@@ -1,35 +1,32 @@
-## paystack
+## Paystack Node.js Library
 
-This generator creates TypeScript/JavaScript client that utilizes [Fetch API](https://fetch.spec.whatwg.org/). The generated Node module can be used in the following environments:
+A Node client library for consuming the Paystack API  
 
-Environment
-* Node.js
-* Webpack
-* Browserify
+## Prerequisite
+Your need to [create a Paystack account](https://dashboard.paystack.com/#/signup), if you don't have one already, to get your test and 
+live secret keys.
 
-Language level
-* ES5 - you must have a Promises/A+ library installed
-* ES6
-
-Module system
-* CommonJS
-* ES6 module system
-
-It can be used in both TypeScript and JavaScript. In TypeScript, the definition should be automatically resolved via `package.json`. ([Reference](http://www.typescriptlang.org/docs/handbook/typings-for-npm-packages.html))
-
-### Building
-
-To build and compile the typescript sources to javascript use:
+## Installation
 ```
-npm install
-npm run build
+npm install @paystack/node --save
 ```
 
-### Consuming
-
-navigate to the folder of your consuming project and run one of the following commands.
-
-
+## Usage
+Import and initialize the library:
 ```
-npm install paystack --save
+import Paystack from '@paystack/node'
+const paystack = new Paystack("sk_test_xxxxxx")
 ```
+
+Initiate a request and parse response:
+```
+paystack.customer.fetch({code: "CUS_o9rf5kuwei3lt4vl"})
+                  .then(customer => console.log(customer))
+                  .catch(error => console.log(error))
+```
+
+## Issues
+Kindly [open an issue](https://github.com/PaystackOSS/paystack-node/issues) if you discover any bug or have problems using this library. 
+
+## License
+This repository is made available under the MIT license. Kindly read the [LICENSE](https://github.com/PaystackOSS/paystack-node/blob/main/LICENSE) file for more information.

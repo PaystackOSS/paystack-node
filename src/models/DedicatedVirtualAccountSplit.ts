@@ -16,34 +16,34 @@ import { exists, mapValues } from '../runtime';
 /**
  * 
  * @export
- * @interface DedicatedNubanSplit
+ * @interface DedicatedVirtualAccountSplit
  */
-export interface DedicatedNubanSplit {
+export interface DedicatedVirtualAccountSplit {
     /**
      * Valid Dedicated virtual account
      * @type {string}
-     * @memberof DedicatedNubanSplit
+     * @memberof DedicatedVirtualAccountSplit
      */
     accountNumber: string;
     /**
      * Subaccount code of the account you want to split the transaction with
      * @type {string}
-     * @memberof DedicatedNubanSplit
+     * @memberof DedicatedVirtualAccountSplit
      */
     subaccount?: string;
     /**
      * Split code consisting of the lists of accounts you want to split the transaction with
      * @type {string}
-     * @memberof DedicatedNubanSplit
+     * @memberof DedicatedVirtualAccountSplit
      */
     splitCode?: string;
 }
 
-export function DedicatedNubanSplitFromJSON(json: any): DedicatedNubanSplit {
-    return DedicatedNubanSplitFromJSONTyped(json, false);
+export function DedicatedVirtualAccountSplitFromJSON(json: any): DedicatedVirtualAccountSplit {
+    return DedicatedVirtualAccountSplitFromJSONTyped(json, false);
 }
 
-export function DedicatedNubanSplitFromJSONTyped(json: any, ignoreDiscriminator: boolean): DedicatedNubanSplit {
+export function DedicatedVirtualAccountSplitFromJSONTyped(json: any, ignoreDiscriminator: boolean): DedicatedVirtualAccountSplit {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -55,7 +55,7 @@ export function DedicatedNubanSplitFromJSONTyped(json: any, ignoreDiscriminator:
     };
 }
 
-export function DedicatedNubanSplitToJSON(value?: DedicatedNubanSplit | null): any {
+export function DedicatedVirtualAccountSplitToJSON(value?: DedicatedVirtualAccountSplit | null): any {
     if (value === undefined) {
         return undefined;
     }

@@ -16,40 +16,40 @@ import { exists, mapValues } from '../runtime';
 /**
  * 
  * @export
- * @interface DedicatedNubanCreate
+ * @interface DedicatedVirtualAccountCreate
  */
-export interface DedicatedNubanCreate {
+export interface DedicatedVirtualAccountCreate {
     /**
      * Customer ID or code
      * @type {string}
-     * @memberof DedicatedNubanCreate
+     * @memberof DedicatedVirtualAccountCreate
      */
     customer: string;
     /**
      * The bank slug for preferred bank. To get a list of available banks, use the List Providers endpoint
      * @type {string}
-     * @memberof DedicatedNubanCreate
+     * @memberof DedicatedVirtualAccountCreate
      */
     preferredBank?: string;
     /**
      * Subaccount code of the account you want to split the transaction with
      * @type {string}
-     * @memberof DedicatedNubanCreate
+     * @memberof DedicatedVirtualAccountCreate
      */
     subaccount?: string;
     /**
      * Split code consisting of the lists of accounts you want to split the transaction with
      * @type {string}
-     * @memberof DedicatedNubanCreate
+     * @memberof DedicatedVirtualAccountCreate
      */
     splitCode?: string;
 }
 
-export function DedicatedNubanCreateFromJSON(json: any): DedicatedNubanCreate {
-    return DedicatedNubanCreateFromJSONTyped(json, false);
+export function DedicatedVirtualAccountCreateFromJSON(json: any): DedicatedVirtualAccountCreate {
+    return DedicatedVirtualAccountCreateFromJSONTyped(json, false);
 }
 
-export function DedicatedNubanCreateFromJSONTyped(json: any, ignoreDiscriminator: boolean): DedicatedNubanCreate {
+export function DedicatedVirtualAccountCreateFromJSONTyped(json: any, ignoreDiscriminator: boolean): DedicatedVirtualAccountCreate {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -62,7 +62,7 @@ export function DedicatedNubanCreateFromJSONTyped(json: any, ignoreDiscriminator
     };
 }
 
-export function DedicatedNubanCreateToJSON(value?: DedicatedNubanCreate | null): any {
+export function DedicatedVirtualAccountCreateToJSON(value?: DedicatedVirtualAccountCreate | null): any {
     if (value === undefined) {
         return undefined;
     }
