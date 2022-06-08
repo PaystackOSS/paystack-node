@@ -24,6 +24,7 @@ src/apis/TransferRecipient.ts
 src/apis/Verification.ts
 src/apis/index.ts
 src/index.ts
+src/models/Accepted.ts
 src/models/Bank.ts
 src/models/BulkChargeInitiate.ts
 src/models/ChargeCreate.ts

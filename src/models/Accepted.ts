@@ -16,39 +16,39 @@ import { exists, mapValues } from '../runtime';
 /**
  * 
  * @export
- * @interface ChargeSubmitPhone
+ * @interface Accepted
  */
-export interface ChargeSubmitPhone {
+export interface Accepted {
     /**
-     * Customer's mobile number
-     * @type {string}
-     * @memberof ChargeSubmitPhone
+     * 
+     * @type {boolean}
+     * @memberof Accepted
      */
-    phone: string;
+    status?: boolean;
     /**
-     * The reference of the ongoing transaction
+     * 
      * @type {string}
-     * @memberof ChargeSubmitPhone
+     * @memberof Accepted
      */
-    reference: string;
+    message?: string;
 }
 
-export function ChargeSubmitPhoneFromJSON(json: any): ChargeSubmitPhone {
-    return ChargeSubmitPhoneFromJSONTyped(json, false);
+export function AcceptedFromJSON(json: any): Accepted {
+    return AcceptedFromJSONTyped(json, false);
 }
 
-export function ChargeSubmitPhoneFromJSONTyped(json: any, ignoreDiscriminator: boolean): ChargeSubmitPhone {
+export function AcceptedFromJSONTyped(json: any, ignoreDiscriminator: boolean): Accepted {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         
-        'phone': json['phone'],
-        'reference': json['reference'],
+        'status': !exists(json, 'status') ? undefined : json['status'],
+        'message': !exists(json, 'message') ? undefined : json['message'],
     };
 }
 
-export function ChargeSubmitPhoneToJSON(value?: ChargeSubmitPhone | null): any {
+export function AcceptedToJSON(value?: Accepted | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -57,8 +57,8 @@ export function ChargeSubmitPhoneToJSON(value?: ChargeSubmitPhone | null): any {
     }
     return {
         
-        'phone': value.phone,
-        'reference': value.reference,
+        'status': value.status,
+        'message': value.message,
     };
 }
 

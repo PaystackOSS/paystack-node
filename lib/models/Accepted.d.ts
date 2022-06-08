@@ -9,25 +9,25 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { BaseAPI } from '../runtime';
-import { Response } from '../models';
-export interface LedgerRequest {
-    perPage?: number;
-    page?: number;
-    from?: Date;
-    to?: Date;
-}
 /**
  *
+ * @export
+ * @interface Accepted
  */
-export declare class Balance extends BaseAPI {
+export interface Accepted {
     /**
-     * You can only transfer from what you have
-     * Fetch Balance
+     *
+     * @type {boolean}
+     * @memberof Accepted
      */
-    fetch(): Promise<Response>;
+    status?: boolean;
     /**
-     * Balance Ledger
+     *
+     * @type {string}
+     * @memberof Accepted
      */
-    ledger(requestParameters: LedgerRequest): Promise<Response>;
+    message?: string;
 }
+export declare function AcceptedFromJSON(json: any): Accepted;
+export declare function AcceptedFromJSONTyped(json: any, ignoreDiscriminator: boolean): Accepted;
+export declare function AcceptedToJSON(value?: Accepted | null): any;

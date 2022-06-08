@@ -1,4 +1,4 @@
-## Paystack Node.js Library
+## Paystack Node Library
 
 A Node client library for consuming the Paystack API  
 
@@ -8,13 +8,13 @@ live secret keys.
 
 ## Installation
 ```
-npm install @paystack/node --save
+npm install @paystack/paystack-sdk --save
 ```
 
 ## Usage
 Import and initialize the library:
 ```
-import Paystack from '@paystack/node'
+import Paystack from '@paystack/paystack-sdk'
 const paystack = new Paystack("sk_test_xxxxxx")
 ```
 
