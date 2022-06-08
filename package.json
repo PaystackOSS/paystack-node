@@ -1,6 +1,6 @@
 {
   "name": "@paystack/paystack-sdk",
-  "version": "1.0.0-beta.5",
+  "version": "1.0.0-beta.6",
   "description": "Paystack API wrapper for Node",
   "author": "Paystack <integrations@paystack.com> (https://paystack.com/docs)",
   "keywords": [
@@ -16,8 +16,8 @@
     "send money", 
     "multi splits"
   ],
-  "homepage": "https://github.com/owner/project",
-  "bugs": "https://github.com/owner/project/issues",
+  "homepage": "https://github.com/PaystackOSS/paystack-node",
+  "bugs": "https://github.com/PaystackOSS/paystack-node/issues",
   "license": "MIT",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
