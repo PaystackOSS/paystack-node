@@ -44,7 +44,7 @@ export interface UpdateRequest {
     phone?: string;
     metadata?: string;
 }
-export interface ValidatteRequest {
+export interface ValidateRequest {
     code: string;
     first_name: string;
     last_name: string;
@@ -90,5 +90,5 @@ export declare class Customer extends BaseAPI {
      * Validate a customer\'s identity
      * Validate Customer
      */
-    validatte(requestParameters: ValidatteRequest): Promise<Accepted>;
+    validate(requestParameters: ValidateRequest): Promise<Accepted>;
 }
