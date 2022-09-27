@@ -13,7 +13,7 @@ npm install @paystack/paystack-sdk --save
 
 ## Usage
 Import and initialize the library:
-```
+```javascript
 const Paystack = require('@paystack/paystack-sdk')
 const paystack = new Paystack("sk_test_xxxxxx")
 
@@ -23,7 +23,7 @@ paystack.transaction.initialize({email: "test@example.com", amount: 20000})
 ```
 
 Import and initialize the library using ES module with `async/await`:
-```
+```javascript
 import Paystack from '@paystack/paystack-sdk'
 const paystack = new Paystack("sk_test_xxxxxx")
 
@@ -42,7 +42,7 @@ initialize(email, amount)
 ```
 
 ### Typescript
-```
+```typescript
 import Paystack from '@paystack/paystack-sdk';
 const paystack = new Paystack("sk_test_xxxxxx");
 
