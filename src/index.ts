@@ -30,4 +30,5 @@ class Paystack {
 
 }
 
-module.exports = Paystack
+module.exports = Paystack;
+module.exports.default = Paystack;

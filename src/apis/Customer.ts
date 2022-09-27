@@ -59,7 +59,7 @@ export interface UpdateRequest {
     metadata?: string;
 }
 
-export interface ValidatteRequest {
+export interface ValidateRequest {
     code: string;
     first_name: string;
     last_name: string;
@@ -282,30 +282,30 @@ export class Customer extends BaseAPI {
      * Validate a customer\'s identity
      * Validate Customer
      */
-    async validatte(requestParameters: ValidatteRequest): Promise<Accepted> {
+    async validate(requestParameters: ValidateRequest): Promise<Accepted> {
         if (requestParameters.code === null || requestParameters.code === undefined) {
-            throw new RequiredError('code','Required parameter code was null or undefined when calling validatte.');
+            throw new RequiredError('code','Required parameter code was null or undefined when calling validate.');
         }
         if (requestParameters.first_name === null || requestParameters.first_name === undefined) {
-            throw new RequiredError('first_name','Required parameter first_name was null or undefined when calling validatte.');
+            throw new RequiredError('first_name','Required parameter first_name was null or undefined when calling validate.');
         }
         if (requestParameters.last_name === null || requestParameters.last_name === undefined) {
-            throw new RequiredError('last_name','Required parameter last_name was null or undefined when calling validatte.');
+            throw new RequiredError('last_name','Required parameter last_name was null or undefined when calling validate.');
         }
         if (requestParameters.type === null || requestParameters.type === undefined) {
-            throw new RequiredError('type','Required parameter type was null or undefined when calling validatte.');
+            throw new RequiredError('type','Required parameter type was null or undefined when calling validate.');
         }
         if (requestParameters.country === null || requestParameters.country === undefined) {
-            throw new RequiredError('country','Required parameter country was null or undefined when calling validatte.');
+            throw new RequiredError('country','Required parameter country was null or undefined when calling validate.');
         }
         if (requestParameters.bvn === null || requestParameters.bvn === undefined) {
-            throw new RequiredError('bvn','Required parameter bvn was null or undefined when calling validatte.');
+            throw new RequiredError('bvn','Required parameter bvn was null or undefined when calling validate.');
         }
         if (requestParameters.bank_code === null || requestParameters.bank_code === undefined) {
-            throw new RequiredError('bank_code','Required parameter bank_code was null or undefined when calling validatte.');
+            throw new RequiredError('bank_code','Required parameter bank_code was null or undefined when calling validate.');
         }
         if (requestParameters.account_number === null || requestParameters.account_number === undefined) {
-            throw new RequiredError('account_number','Required parameter account_number was null or undefined when calling validatte.');
+            throw new RequiredError('account_number','Required parameter account_number was null or undefined when calling validate.');
         }
         const queryParameters: any = {};
 

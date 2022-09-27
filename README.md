@@ -14,15 +14,50 @@ npm install @paystack/paystack-sdk --save
 ## Usage
 Import and initialize the library:
 ```
-import Paystack from '@paystack/paystack-sdk'
+const Paystack = require('@paystack/paystack-sdk')
 const paystack = new Paystack("sk_test_xxxxxx")
+
+paystack.transaction.initialize({email: "test@example.com", amount: 20000})
+                    .then(response => console.log(response))
+                    .catch(error => console.log(error))
 ```
 
-Initiate a request and parse response:
+Import and initialize the library using ES module with `async/await`:
 ```
-paystack.customer.fetch({code: "CUS_o9rf5kuwei3lt4vl"})
-                  .then(customer => console.log(customer))
-                  .catch(error => console.log(error))
+import Paystack from '@paystack/paystack-sdk'
+const paystack = new Paystack("sk_test_xxxxxx")
+
+const initialize = async(email, amount) => {
+  const response = await paystack.transaction.initialize({
+    email,
+    amount
+  })
+
+  console.log(response)
+}
+
+const email = 'test@example.com'
+const amount = 2000
+initialize(email, amount)
+```
+
+### Typescript
+```
+import Paystack from '@paystack/paystack-sdk';
+const paystack = new Paystack("sk_test_xxxxxx");
+
+const initialize = async(email, amount) => {
+  const response = await paystack.transaction.initialize({
+    email,
+    amount
+  });
+
+  console.log(response);
+}
+
+const email = 'test@example.com';
+const amount = 2000;
+initialize(email, amount);
 ```
 
 ## Issues
