@@ -107,6 +107,7 @@ export declare class Transaction extends BaseAPI {
      */
     event(requestParameters: EventRequest): Promise<Response>;
     /**
+     * Fetch a transaction to get its details
      * Fetch Transaction
      */
     fetch(requestParameters: FetchRequest): Promise<Response>;
@@ -116,6 +117,7 @@ export declare class Transaction extends BaseAPI {
      */
     initialize(requestParameters: InitializeRequest): Promise<Response>;
     /**
+     * List transactions that has occurred on your integration
      * List Transactions
      */
     list(requestParameters: ListRequest): Promise<Response>;
@@ -128,14 +130,17 @@ export declare class Transaction extends BaseAPI {
      */
     session(requestParameters: SessionRequest): Promise<Response>;
     /**
+     * Get the details about the lifecycle of a transaction from initiation to completion
      * Fetch Transaction Timeline
      */
     timeline(requestParameters: TimelineRequest): Promise<Response>;
     /**
+     * Get the total amount of all transactions
      * Transaction Totals
      */
     totals(requestParameters: TotalsRequest): Promise<Response>;
     /**
+     * Verify a previously initiated transaction using it\'s reference
      * Verify Transaction
      */
     verify(requestParameters: VerifyRequest): Promise<Response>;

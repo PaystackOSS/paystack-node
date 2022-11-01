@@ -1,16 +1,12 @@
 {
   "compilerOptions": {
     "declaration": true,
+    "declarationDir": "./lib/types",
     "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
+    "esModuleInterop": true,
     "outDir": "lib",
-    "typeRoots": [
-      "node_modules/@types"
-    ]
   },
-  "exclude": [
-    "lib",
-    "node_modules"
-  ]
+  "include": ["src"]
 }

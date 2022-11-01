@@ -1,6 +1,6 @@
 import * as Resources from './apis'
 
-class Paystack {
+export class Paystack {
   [index: string]: any
 
   constructor(apiKey: string) {
