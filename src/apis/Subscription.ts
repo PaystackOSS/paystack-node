@@ -259,7 +259,7 @@ export class Subscription extends BaseAPI {
 
         const response = await this.request({
             path: `/subscription/{code}/manage/link`.replace(`{${"code"}}`, encodeURIComponent(String(requestParameters.code))),
-            method: 'POST',
+            method: 'GET',
             query: queryParameters,
         });
         

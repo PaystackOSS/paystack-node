@@ -276,6 +276,7 @@ export class Transaction extends BaseAPI {
     }
 
     /**
+     * Fetch a transaction to get its details
      * Fetch Transaction
      */
     async fetch(requestParameters: FetchRequest): Promise<Response> {
@@ -373,6 +374,7 @@ export class Transaction extends BaseAPI {
     }
 
     /**
+     * List transactions that has occurred on your integration
      * List Transactions
      */
     async list(requestParameters: ListRequest): Promise<Response> {
@@ -479,6 +481,7 @@ export class Transaction extends BaseAPI {
     }
 
     /**
+     * Get the details about the lifecycle of a transaction from initiation to completion
      * Fetch Transaction Timeline
      */
     async timeline(requestParameters: TimelineRequest): Promise<Response> {
@@ -498,6 +501,7 @@ export class Transaction extends BaseAPI {
     }
 
     /**
+     * Get the total amount of all transactions
      * Transaction Totals
      */
     async totals(requestParameters: TotalsRequest): Promise<Response> {
@@ -530,6 +534,7 @@ export class Transaction extends BaseAPI {
     }
 
     /**
+     * Verify a previously initiated transaction using it\'s reference
      * Verify Transaction
      */
     async verify(requestParameters: VerifyRequest): Promise<Response> {
