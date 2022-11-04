@@ -79,6 +79,7 @@ src/models/TransferRecipientUpdate.ts
 src/models/TransferResendOTP.ts
 src/models/USSD.ts
 src/models/VerificationBVNMatch.ts
+src/models/WebhookEvent.ts
 src/models/index.ts
 src/runtime.ts
 tsconfig.json
