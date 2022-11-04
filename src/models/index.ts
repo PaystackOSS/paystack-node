@@ -53,3 +53,4 @@ export * from './TransferRecipientUpdate';
 export * from './TransferResendOTP';
 export * from './USSD';
 export * from './VerificationBVNMatch';
+export * from './WebhookEvent';
