@@ -58,6 +58,7 @@ export interface FetchRequest {
 export interface InitializeRequest {
     email: string;
     amount: number;
+    label?: string;
     currency?: string;
     reference?: string;
     callback_url?: string;
@@ -107,7 +108,7 @@ export interface VerifyRequest {
 }
 
 /**
- * 
+ *
  */
 export class Transaction extends BaseAPI {
 
@@ -179,7 +180,7 @@ export class Transaction extends BaseAPI {
             query: queryParameters,
             body: formParams,
         });
-        
+
         return ResponseFromJSON(response);
     }
 
@@ -220,7 +221,7 @@ export class Transaction extends BaseAPI {
             query: queryParameters,
             body: formParams,
         });
-        
+
         return ResponseFromJSON(response);
     }
 
@@ -252,7 +253,7 @@ export class Transaction extends BaseAPI {
             method: 'GET',
             query: queryParameters,
         });
-        
+
         return ResponseFromJSON(response);
     }
 
@@ -271,7 +272,7 @@ export class Transaction extends BaseAPI {
             method: 'GET',
             query: queryParameters,
         });
-        
+
         return ResponseFromJSON(response);
     }
 
@@ -291,7 +292,7 @@ export class Transaction extends BaseAPI {
             method: 'GET',
             query: queryParameters,
         });
-        
+
         return ResponseFromJSON(response);
     }
 
@@ -316,6 +317,10 @@ export class Transaction extends BaseAPI {
 
         if (requestParameters.amount !== undefined) {
             formParams['amount'] = requestParameters.amount;
+        }
+
+        if (requestParameters.label !== undefined) {
+            formParams['label'] = requestParameters.label;
         }
 
         if (requestParameters.currency !== undefined) {
@@ -369,7 +374,7 @@ export class Transaction extends BaseAPI {
             query: queryParameters,
             body: formParams,
         });
-        
+
         return ResponseFromJSON(response);
     }
 
@@ -402,7 +407,7 @@ export class Transaction extends BaseAPI {
             method: 'GET',
             query: queryParameters,
         });
-        
+
         return ResponseFromJSON(response);
     }
 
@@ -457,7 +462,7 @@ export class Transaction extends BaseAPI {
             query: queryParameters,
             body: formParams,
         });
-        
+
         return ResponseFromJSON(response);
     }
 
@@ -476,7 +481,7 @@ export class Transaction extends BaseAPI {
             method: 'GET',
             query: queryParameters,
         });
-        
+
         return ResponseFromJSON(response);
     }
 
@@ -496,7 +501,7 @@ export class Transaction extends BaseAPI {
             method: 'GET',
             query: queryParameters,
         });
-        
+
         return ResponseFromJSON(response);
     }
 
@@ -529,7 +534,7 @@ export class Transaction extends BaseAPI {
             method: 'GET',
             query: queryParameters,
         });
-        
+
         return ResponseFromJSON(response);
     }
 
@@ -549,7 +554,7 @@ export class Transaction extends BaseAPI {
             method: 'GET',
             query: queryParameters,
         });
-        
+
         return ResponseFromJSON(response);
     }
 
