@@ -45,6 +45,7 @@ export interface FetchRequest {
 export interface InitializeRequest {
     email: string;
     amount: number;
+    label?: string;
     currency?: string;
     reference?: string;
     callback_url?: string;
