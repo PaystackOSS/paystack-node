@@ -23,7 +23,7 @@ export interface CreateRequest {
     name: string;
     amount: number;
     interval: string;
-    description?: boolean;
+    description?: string;
     send_invoices?: boolean;
     send_sms?: boolean;
     currency?: string;

@@ -9,9 +9,11 @@ export class Paystack {
 
   private extend(apiKey: string) {
     for (const resource in Resources) {
-      if (Resources.hasOwnProperty(resource)) {
-        this[this.toCamelCase(resource)] = new Resources[resource][resource](apiKey);
-      }
+      if (Resources[resource]) {
+				this[this.toCamelCase(resource)] = new Resources[resource][resource](
+					apiKey
+				);
+			}
     }
   }
 
@@ -29,6 +31,3 @@ export class Paystack {
   }
 
 }
-
-module.exports = Paystack;
-module.exports.default = Paystack;

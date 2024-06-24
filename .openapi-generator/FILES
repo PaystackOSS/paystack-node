@@ -81,4 +81,7 @@ src/models/USSD.ts
 src/models/VerificationBVNMatch.ts
 src/models/index.ts
 src/runtime.ts
+tsconfig.cjs.json
+tsconfig.esm.json
 tsconfig.json
+tsconfig.types.json
