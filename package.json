@@ -1,8 +1,9 @@
 {
   "name": "@paystack/paystack-sdk",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "Paystack API wrapper for Node",
   "author": "Paystack <integrations@paystack.com> (https://paystack.com/docs)",
+  "type": "module",
   "keywords": [
     "paystack",
     "payment",
@@ -19,11 +20,19 @@
   "homepage": "https://github.com/PaystackOSS/paystack-node",
   "bugs": "https://github.com/PaystackOSS/paystack-node/issues",
   "license": "MIT",
-  "main": "./lib/index.js",
-  "typings": "./lib/index.d.ts",
+   "exports": {
+    "types": "./dist/types/index.d.ts",
+    "require": "./dist/cjs/index.js",
+    "import": "./dist/esm/index.js",
+    "default": "./dist/esm/index.js"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/esm/index.js",
+	"types": "./dist/types/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "prepare": "npm run build"
+    "build": "npm run clean && npm run compile",
+		"clean": "rm -rf ./dist",
+		"compile": "tsc -p tsconfig.esm.json && tsc -p ./tsconfig.cjs.json && tsc -p ./tsconfig.types.json"
   },
   "devDependencies": {
     "@types/node": "^15.0.3",

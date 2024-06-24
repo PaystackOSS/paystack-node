@@ -13,7 +13,7 @@
  */
 
 
-import https = require('https');
+import * as https from 'https';
 
 const BASE_PATH = "https://api.paystack.co".replace(/\/+$/, "");
 type HTTPMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE' | 'OPTIONS' | 'HEAD';
@@ -55,7 +55,7 @@ export class BaseAPI {
             path: tempPath,
             headers: {
                 "authorization": `Bearer ${this.apiKey}`,
-                "user-agent": `@paystack/paystack-sdk - 1.0.1`
+                "user-agent": `@paystack/paystack-sdk - 1.2.0`
             }
         }
 

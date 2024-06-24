@@ -39,10 +39,10 @@ export interface PlanCreate {
     interval: string;
     /**
      * A description for this plan
-     * @type {boolean}
+     * @type {string}
      * @memberof PlanCreate
      */
-    description?: boolean;
+    description?: string;
     /**
      * Set to false if you don't want invoices to be sent to your customers
      * @type {boolean}
