@@ -1,9 +1,8 @@
 {
   "name": "@paystack/paystack-sdk",
-  "version": "1.2.0",
+  "version": "1.2.1-beta.1",
   "description": "Paystack API wrapper for Node",
   "author": "Paystack <integrations@paystack.com> (https://paystack.com/docs)",
-  "type": "module",
   "keywords": [
     "paystack",
     "payment",
@@ -20,22 +19,25 @@
   "homepage": "https://github.com/PaystackOSS/paystack-node",
   "bugs": "https://github.com/PaystackOSS/paystack-node/issues",
   "license": "MIT",
-   "exports": {
-    "types": "./dist/types/index.d.ts",
-    "require": "./dist/cjs/index.js",
-    "import": "./dist/esm/index.js",
-    "default": "./dist/esm/index.js"
-  },
   "main": "./dist/index.js",
-  "module": "./dist/esm/index.js",
-	"types": "./dist/types/index.d.ts",
+  "module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+  "tsup": {
+		"entry": [
+			"src/index.ts"
+		],
+		"splitting": true,
+		"sourcemap": false,
+		"clean": true
+	},
   "scripts": {
-    "build": "npm run clean && npm run compile",
+    "build": "npm run clean && tsup --format esm,cjs --dts",
 		"clean": "rm -rf ./dist",
 		"compile": "tsc -p tsconfig.esm.json && tsc -p ./tsconfig.cjs.json && tsc -p ./tsconfig.types.json"
   },
   "devDependencies": {
     "@types/node": "^15.0.3",
-    "typescript": "^3.6"
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.2"
   }
 }
