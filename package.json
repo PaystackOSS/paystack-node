@@ -1,6 +1,6 @@
 {
   "name": "@paystack/paystack-sdk",
-  "version": "1.2.1-beta.1",
+  "version": "1.2.1-beta.2",
   "description": "Paystack API wrapper for Node",
   "author": "Paystack <integrations@paystack.com> (https://paystack.com/docs)",
   "keywords": [
