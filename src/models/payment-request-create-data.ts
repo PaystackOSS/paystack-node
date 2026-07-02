@@ -1,0 +1,44 @@
+export interface PaymentRequestCreateData {
+  /**  */
+  id: number;
+  /**  */
+  integration: number;
+  /**  */
+  domain: string;
+  /**  */
+  amount: number;
+  /**  */
+  currency: string;
+  /**  */
+  due_date: string;
+  /**  */
+  has_invoice: boolean;
+  /**  */
+  invoice_number: number;
+  /**  */
+  description: string;
+  /**  */
+  line_items: Array<unknown>;
+  /**  */
+  tax: Array<unknown>;
+  /**  */
+  request_code: string;
+  /**  */
+  status: string;
+  /**  */
+  paid: boolean;
+  /**  */
+  metadata: Record<string, unknown>;
+  /**  */
+  notifications: Array<unknown>;
+  /**  */
+  offline_reference: string;
+  /**  */
+  customer: number;
+  /**  */
+  created_at: string;
+  /**  */
+  discount: unknown;
+  /**  */
+  split_code: string;
+}

@@ -1,43 +1,33 @@
 {
   "name": "@paystack/paystack-sdk",
   "version": "1.2.1-beta.2",
-  "description": "Paystack API wrapper for Node",
-  "author": "Paystack <integrations@paystack.com> (https://paystack.com/docs)",
-  "keywords": [
-    "paystack",
-    "payment",
-    "cards",
-    "charge", 
-    "recurring payment",
-    "subscriptions",
-    "transfers",
-    "single transfers",
-    "bulk transfers", 
-    "send money", 
-    "multi splits"
-  ],
-  "homepage": "https://github.com/PaystackOSS/paystack-node",
-  "bugs": "https://github.com/PaystackOSS/paystack-node/issues",
-  "license": "MIT",
-  "main": "./dist/index.js",
+  "description": "Generated Paystack Node.js SDK",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./models": {
+      "types": "./dist/models/index.d.ts",
+      "import": "./dist/models/index.mjs",
+      "require": "./dist/models/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
-	"types": "./dist/index.d.ts",
-  "tsup": {
-		"entry": [
-			"src/index.ts"
-		],
-		"splitting": true,
-		"sourcemap": false,
-		"clean": true
-	},
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "npm run clean && tsup --format esm,cjs --dts",
-		"clean": "rm -rf ./dist",
-		"compile": "tsc -p tsconfig.esm.json && tsc -p ./tsconfig.cjs.json && tsc -p ./tsconfig.types.json"
+    "build": "tsup",
+    "test": "vitest run"
   },
   "devDependencies": {
-    "@types/node": "^15.0.3",
-    "tsup": "^8.1.0",
-    "typescript": "^5.5.2"
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
   }
 }

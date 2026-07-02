@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
-    "esModuleInterop": false,
+    "target": "ES2020",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "outDir": "dist"
   },
-  "include": ["src"]
+  "include": ["src/**/*.ts"]
 }
