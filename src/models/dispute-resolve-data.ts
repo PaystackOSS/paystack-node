@@ -1,0 +1,46 @@
+export interface DisputeResolveData {
+  /**  */
+  currency: string;
+  /**  */
+  last4: string;
+  /**  */
+  bin: string;
+  /**  */
+  transaction_reference: unknown;
+  /**  */
+  merchant_transaction_reference: string;
+  /**  */
+  refund_amount: number;
+  /**  */
+  status: string;
+  /**  */
+  domain: string;
+  /**  */
+  resolution: string;
+  /**  */
+  category: string;
+  /**  */
+  note: unknown;
+  /**  */
+  attachments: string;
+  /**  */
+  id: number;
+  /**  */
+  integration: number;
+  /**  */
+  transaction: number;
+  /**  */
+  created_by: number;
+  /**  */
+  evidence: number;
+  /**  */
+  resolvedAt: string;
+  /**  */
+  createdAt: string;
+  /**  */
+  updatedAt: string;
+  /**  */
+  dueAt: unknown;
+  /**  */
+  message: { dispute: number; sender: string; body: string; id: number; createdAt: string; updatedAt: string };
+}

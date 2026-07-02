@@ -1,0 +1,46 @@
+export interface SubscriptionCreateData {
+  /**  */
+  customer: number;
+  /**  */
+  plan: number;
+  /**  */
+  integration: number;
+  /**  */
+  domain: string;
+  /**  */
+  start: number;
+  /**  */
+  status: string;
+  /**  */
+  quantity: number;
+  /**  */
+  amount: number;
+  /**  */
+  authorization: number;
+  /**  */
+  invoice_limit: number;
+  /**  */
+  split_code: unknown;
+  /**  */
+  subscription_code: string;
+  /**  */
+  email_token: string;
+  /**  */
+  id: number;
+  /**  */
+  cancelledAt: unknown;
+  /**  */
+  createdAt: string;
+  /**  */
+  updatedAt: string;
+  /**  */
+  cron_expression: string;
+  /**  */
+  next_payment_date: string;
+  /**  */
+  easy_cron_id: string;
+  /**  */
+  open_invoice: string;
+  /**  */
+  metadata: Record<string, unknown>;
+}

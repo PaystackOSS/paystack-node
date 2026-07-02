@@ -1,0 +1,50 @@
+export interface OrderValidateData {
+  /**  */
+  order_code: string;
+  /**  */
+  domain: string;
+  /**  */
+  currency: string;
+  /**  */
+  amount: number;
+  /**  */
+  email: string;
+  /**  */
+  status: string;
+  /**  */
+  refunded: boolean;
+  /**  */
+  paid_at: unknown;
+  /**  */
+  shipping_address: unknown;
+  /**  */
+  metadata: unknown;
+  /**  */
+  shipping_fees: number;
+  /**  */
+  shipping_method: unknown;
+  /**  */
+  is_viewed: boolean;
+  /**  */
+  expiration_date: string;
+  /**  */
+  pay_for_me: boolean;
+  /**  */
+  id: number;
+  /**  */
+  integration: { key: string; name: string; logo: string; allowed_currencies: Array<unknown> };
+  /**  */
+  transaction: unknown;
+  /**  */
+  page: unknown;
+  /**  */
+  customer: { id: number; first_name: string; last_name: string; email: string; customer_code: string; phone: string; metadata: Record<string, unknown>; risk_action: string; international_format_phone: string };
+  /**  */
+  shipping: unknown;
+  /**  */
+  createdAt: string;
+  /**  */
+  updatedAt: string;
+  /**  */
+  payer: unknown;
+}

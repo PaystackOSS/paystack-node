@@ -1,0 +1,34 @@
+export interface PlanCreateData {
+  /**  */
+  currency: string;
+  /**  */
+  name: string;
+  /**  */
+  amount: number;
+  /**  */
+  interval: string;
+  /**  */
+  integration: number;
+  /**  */
+  domain: string;
+  /**  */
+  plan_code: string;
+  /**  */
+  invoice_limit: number;
+  /**  */
+  send_invoices: boolean;
+  /**  */
+  send_sms: boolean;
+  /**  */
+  hosted_page: boolean;
+  /**  */
+  migrate: boolean;
+  /**  */
+  is_archived: boolean;
+  /**  */
+  id: number;
+  /**  */
+  createdAt: string;
+  /**  */
+  updatedAt: string;
+}
