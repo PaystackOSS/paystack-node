@@ -2,6 +2,7 @@
   "compilerOptions": {
     "moduleResolution": "node",
     "esModuleInterop": false,
+    "resolveJsonModule": true,
   },
   "include": ["src"]
 }

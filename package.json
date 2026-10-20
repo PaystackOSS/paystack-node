@@ -1,6 +1,6 @@
 {
   "name": "@paystack/paystack-sdk",
-  "version": "1.2.1-beta.2",
+  "version": "1.2.2",
   "description": "Paystack API wrapper for Node",
   "author": "Paystack <integrations@paystack.com> (https://paystack.com/docs)",
   "keywords": [
@@ -22,6 +22,11 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
 	"types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "tsup": {
 		"entry": [
 			"src/index.ts"
@@ -31,8 +36,9 @@
 		"clean": true
 	},
   "scripts": {
-    "build": "npm run clean && tsup --format esm,cjs --dts",
+    "build": "tsup --format esm,cjs --dts",
 		"clean": "rm -rf ./dist",
+    "prepare": "npm run build",
 		"compile": "tsc -p tsconfig.esm.json && tsc -p ./tsconfig.cjs.json && tsc -p ./tsconfig.types.json"
   },
   "devDependencies": {
